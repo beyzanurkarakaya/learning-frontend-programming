@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter|Oleo+Script&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100px;
+  box-shadow: 0 10px 10px -10px grey; /*, x ekseni, y eksni, derinlik yani z ekseni, blur*/
+  position: fixed;
+  z-index: 2;
+  background-color: #fff;
+}
+
+.logo{
+  width: 100px; /*resimlerde width ayarlanınca otomatikman height da ayalanır*/
+  cursor: pointer; /*tıklanabilir görünmesini sağlar*/
+}
+
+.navbar-items{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Days One', sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+  width: 100%;
+  height: 100px;
+  transition: all .2s linear;
+}
+
+.navbar-items:hover{
+  background-color: #000003;
+  font-weight: bold;
+  color: #fff;
+  border-bottom: 5px solid #00CED1; /*solid yerine dotted dersek gölge kesikli şekilde olur*/
+
+}
+
+.conteiner{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 100px;
+}
+
+.card{
+  width: 50%;
+  height: 1000px;
+  background: url('https://picsum.photos/960/600');
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%) blur(5px);
+  transition: all .3s linear;
+  cursor: pointer;
+}
+
+.card:hover{
+  filter: grayscale(0%) blur(0px); /*filter: none yazarak da aynı şeyi elde edebiliriz*/
+}
